@@ -1,0 +1,15 @@
+let string = "          it's nice to meet you           "
+
+console.log(string)
+
+let wtString = string.trim()
+
+console.log(wtString)
+
+let sWtString = string.trimStart()
+
+console.log(sWtString)
+
+console.log(string.trimEnd())
+
+

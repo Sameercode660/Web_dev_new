@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <select name="" id="">
+        <option value="" selected disabled>Select option</option>
+        <option value="">Inaccuracy by store</option>
+        <option value="">Customer request</option>
+        <option value="">Product not available</option>
+        <option value="">Machine not working</option>
+    </select>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <button class="btn" type="submit" autofocus>Submit</button>
+
+    <script>
+        let button = document.querySelector('.btn');
+        let text = document.querySelector('#text');
+        let body = document.querySelector('body')
+        
+        
+        button.addEventListener('click', ()=>{
+             if(text.value == "")
+             {
+                 text.style.border = '2px solid red';
+                alert('Please enter some remark')
+             }
+             else
+             {
+                alert('Remarked Successfully!')
+                text.style.border = '2px solid black';
+                text.value = ""
+             }
+        })
+         
+    </script>
+</body>
+</html>

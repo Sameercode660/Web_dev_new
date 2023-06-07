@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset</title>
+    <style>
+        fieldset{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 40%;
+        }
+        legend{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="action.php">
+        <fieldset>
+            <legend>
+                < Input form >
+            </legend>
+            <label for="name">Name: </label>
+            <input type="text" name="" placeholder="Enter you name" id="name">
+            
+            <label for="email">E-mail: </label>
+            <input type="email" placeholder="Enter e-mail" id="email">
+            
+            <label for="password">password: </label>
+            <input type="password" name="" id="password" placeholder="Password">
+
+            <input type="button" value="Submit" id="btn">
+        </fieldset>
+    </form>
+    <script>
+        let name = document.getElementById('name')
+        let email = document.getElementById('email')
+        let password = document.getElementById('password')
+        let button = document.getElementById('btn')
+
+        button.addEventListener('click', ()=>{
+            alert('Submited successfully')
+        })
+
+    </script>
+</body>
+</html>

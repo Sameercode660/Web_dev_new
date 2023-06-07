@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css paper shadow cart</title>
+    <style>
+        .container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .cart {
+            margin: 10px 8px;
+            padding: 20px 50px;
+            text-align: center;
+            text-decoration: none;
+            width: 150px;
+            height: 100px;
+            border-radius: 12px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            color: black;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width:768px) {
+            .container {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .cart {
+                width: 70%;
+                margin: 10px auto;
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="" class="cart">Sales Report</a>
+        </div>
+        <div>
+            <a href="" class="cart">Cromix Report</a>
+
+        </div>
+        <div>
+            <a href="" class="cart">Total Report</a>
+
+        </div>
+        <div>
+            <a href="" class="cart">Other Report</a>
+
+        </div>
+        <div>
+            <a href="" class="cart">KPI</a>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optional</title>
+    <style>
+        input:optional{
+            background-color: green;
+        }
+        input:out-of-range{
+            color : red;
+        }
+        input:read-only{
+            color : blue;
+        }
+        input:read-write{
+            background-color: red;
+        
+        }
+        input:required{
+            background-color: cyan;
+        }
+        :root{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <input type="text" required class="text">
+    <input type="number" name="" id="" min="1" max="5" readonly value="4">
+</body>
+</html>

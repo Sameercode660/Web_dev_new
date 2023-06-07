@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition using css</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            transition: all 2s ease-in-out;
+        }
+        img:hover{
+            filter : opacity(0%);
+        }
+        .container{
+            width : 100px;
+            height: 40px;
+            background-color: red;
+            transition-property : all;
+            transition-duration: .9s;
+            transition-delay: .1s;
+            transition-timing-function: ease-in-out;
+            position: relative;
+        }
+        .container:hover{
+            width: 200px;
+            background-color: cyan;
+            margin-left: 500px;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="./img2.jpg" alt="">
+    <div class="container">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css filter</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content : center;
+            align-items : center;
+        }
+        .container{
+            width: 100px;
+            height : 100px;
+            border: 10px solid red;
+            box-shadow: 0px 0px 15px 5px red, 0px 0px 15px 5px red inset;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation-name: progress;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes progress{
+            0%{
+                box-shadow: 0px 0px 8px 3px red, 0px 0px 9px 3px red inset;
+            }
+            50%{
+                box-shadow: 0px 0px 12px 5px red, 0px 0px 12px 5px red inset;
+            }
+            100%{
+                box-shadow: 0px 0px 15px 8px red, 0px 0px 15px 8px red inset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>

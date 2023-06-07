@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css link with pseudo class</title>
+    <style>
+        input:invalid{
+            border: 2px solid red;
+            color: red;
+        }
+        input:valid{
+            color: green;
+        }
+        a:link{
+            color: blue;
+        }
+        a:hover{
+            color: black;
+        }
+        a:visited{
+            color: rgb(237, 19, 252);
+        }
+        a:active{
+            color: yellow;
+        }
+
+        p:lang(it){
+            color: red;
+        }
+        p:lang(en){
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Section</a>
+        <a href="">Contact</a>
+    </div>
+    <input type="email" name="" id=""  >
+    <p lang="en">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse recusandae magnam ex quidem doloribus id mollitia quas! Commodi quas ad, fugiat repudiandae, quaerat facere corporis aperiam, maxime nobis consequatur accusamus.</p>
+    <p lang="it">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam aspernatur incidunt fuga reprehenderit in facilis consequatur soluta obcaecati pariatur eos, veritatis corrupti ipsa temporibus molestiae porro cumque nemo, sint quaerat?</p>
+</body>
+</html>

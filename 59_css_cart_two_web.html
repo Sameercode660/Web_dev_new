@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web part</title>
+    <style>
+        body{
+            display: flex;
+            gap: 90px;
+        }
+        .container {
+            text-align: center;
+            display: flex;
+            justify-content: start;
+            width: 10%;
+            flex-direction: column;
+            height: 100vh;
+            overflow: scroll;
+            margin-left: 10rem;
+        }
+
+        .cart {
+            margin: 10px 8px;
+            padding: 20px 50px;
+            text-align: center;
+            text-decoration: none;
+            width: 150px;
+            height: 100px;
+            border-radius: 12px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            color: black;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
+        iframe{
+            width: 60%;
+            height: 100vh;
+            margin: auto;
+            position: absolute;
+            left: 20%;
+            text-align: justify;
+        }
+        @media screen and (max-width:1440px){
+             .container{
+                display: none;
+             }
+             body{
+                justify-content: center;
+             }
+             iframe{
+                width: 80%;
+                position: static;
+             }
+        }
+        @media screen and (max-width:425px){
+            iframe{
+                width: 94%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <button href="" class="cart" id="cart1">Sales Report</button>
+        </div>
+        <div>
+            <button href="" class="cart" id="cart2" >Cromix Report</button>
+
+        </div>
+        <div>
+            <button href="" class="cart" id="cart3">Total Report</button>
+
+        </div>
+        <div>
+            <button href="" class="cart" id="cart4">Other Report</button>
+
+        </div>
+        <div>
+            <button href="" class="cart" id="cart5">KPI</button>
+
+        </div>
+        <div>
+            <button href="" class="cart" id="cart6">KPI</button>
+
+        </div>
+        <div>
+            <button href="" class="cart" id="cart7">KPI</button>
+
+        </div>
+         
+    </div>
+    <iframe src="temp.html" frameborder="0" id="if"></iframe>
+    <script>
+        let cart2 = document.getElementById('cart2')
+        let iframe = document.getElementById('if')
+        
+        // function change(event)
+        // {
+        //     event.preventDefault(); 
+        //     console.log('called')
+        //     iframe.src = 'cart2.html'
+        // }
+        cart2.addEventListener('click', (event)=>{
+            iframe.src = 'cart2.html'
+        })
+
+         
+    </script>
+</body>
+</html>

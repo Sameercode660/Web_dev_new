@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown Menu</title>
+    <style>
+        *{
+            padding : 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        nav, ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul{
+            margin-top : 8px;
+            column-gap: 10px;
+        }
+        li{
+            list-style: none;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Section</li>
+            <li>About</li>
+            <li><select name="Enter">
+                <option disabled selected value="">Enter a value</option>
+                <option value="VsCode">VsCode</option>
+                <option value="Sublime">Sublime</option>
+                <option value="Atom">Atom</option>
+                 
+            </select></li>
+        </ul>
+    </nav>
+</body>
+</html>

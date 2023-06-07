@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page with video background</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing : border-box;
+        }
+        html,body{
+            height: 100%;
+            width : 100%
+        }
+        .video-container{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            z-index : -10;
+            top : 0px
+        }
+        .container{
+            position: relative;
+            left : 55%;
+            top : 40%;
+            font-size : 2.3rem; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Programming is thinking, not just typing
+    </div>
+    <div class="video-container">
+        <video loop autoplay src="./Cello.mp4"></video>
+    </div>
+</body>
+</html>

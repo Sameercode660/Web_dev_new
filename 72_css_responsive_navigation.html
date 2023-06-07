@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-image: url(./bg-image.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        header{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 60px;
+            align-items: center;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all .3s;
+        }
+        a:hover{
+            color: rgba(255, 166, 0, 0.703);
+        }
+        .navlinks ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        ul{
+            list-style : none;
+        }
+        li{
+            padding: 0px 20px;
+        }
+    
+        i{
+            color: white;
+            font-size: 1.2rem;
+        }
+        .btn{
+            background-color: orange;
+            border: none;
+            outline: none;
+            padding: 8px 25px;
+            border-radius: 10px;
+        }
+        .icon{
+            display: none;
+        }
+
+        @media screen and (max-width:950px)
+        {
+            .navlinks,
+            .get-started{
+                display: none;
+            }
+            .icon{
+                display: block;
+            }
+            header{
+                justify-content: space-around;
+            }
+           
+                 
+        }
+        @media screen and (min-width:951px)
+        {
+            .container{
+                display: none;
+            }
+        }
+        @media screen and (max-width:425px)
+        {
+            .container .btn{
+                width: 100%;
+            }
+        }
+        
+         
+        
+
+         .container a{
+            display: block;
+            padding: 10px 0px;
+         }
+         .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(255,255,255,0.3);
+            width: 80%;
+            margin: auto;
+            padding: 20px 0px;
+            border-radius: 15px;
+         }
+         .open{
+            display: none;
+         }
+         .container .btn{
+            width: 60%;
+            color: white;
+            font-size: 1.2rem;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="link-container"><a href="">SamCreation</a></div>
+        <div class="navlinks">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Section</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="get-started">
+            <button class="btn">Get Start</button>
+        </div>
+    </header>
+     <div class="container open">
+        <a href="">Home</a>
+        <a href="">Section</a>
+        <a href="">Contact</a>
+        <a href="">About</a>
+        <button class="btn">get-started</button>
+     </div>
+
+    <script>
+        let icon = document.querySelector('.fa-solid')
+        let container = document.querySelector('.container')
+
+        icon.addEventListener('click', ()=>{
+            container.classList.toggle('open')
+            if(icon.classList.contains('open'))
+            {
+                icon.classList.replace('fa-solid fa-bars', 'fa-duotone fa-bars-filter')
+            }
+            else{
+                icon.classList.replace('fa-duotone fa-bars-filter', 'fa-solid fa-bars')
+            }
+        })
+    </script>
+</body>
+</html>
+<!-- <i class="fa-regular fa-x"></i> -->
+
+ 

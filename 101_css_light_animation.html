@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css animation</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .container{
+            margin: auto;
+            width: 200px;
+            height: 20px;
+            background-color: red;
+        }
+        .container2{
+            width: 30px;
+            height : 20px;
+            background-color: cyan;
+            position: relative;
+            bottom: 20px;
+            left: 370px;
+            animation-name: progress;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes progress{
+            from{
+                left : 370px;
+            }
+            to{
+                left: 541px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container2"></div>
+</body>
+</html>

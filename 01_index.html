@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<body>
+   
+
+    <!-- HTML code for the element whose text we want to copy -->
+<div id="text-to-copy">This is the text that we want to copy to the clipboard.</div>
+
+<!-- HTML code for the "Copy to Clipboard" button -->
+<button onclick="copyToClipboard()">Copy to Clipboard</button>
+
+<!-- JavaScript code to copy the text when the button is clicked -->
+<script>
+function copyToClipboard() {
+  // Get the text that we want to copy
+  const text = document.getElementById("text-to-copy").innerText;
+  
+  // Create a new textarea element and set its value to the text we want to copy
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  
+  // Append the textarea element to the document
+  document.body.appendChild(textarea);
+  
+  // Select the text inside the textarea element
+  textarea.select();
+  
+  // Copy the selected text to the clipboard
+  document.execCommand("copy");
+  
+  // Remove the textarea element from the document
+  document.body.removeChild(textarea);
+}
+</script>
+
+    <dl>
+        <dt>Lemon tea</dt>
+        <dd>Lemon Ice tea</dd>
+        <dt>Hot tea</dt>
+        <dd>Hot lemon tea</dd>
+    </dl>
+    <a href="logo.png" download="logo"></a>
+</body>
+</html>

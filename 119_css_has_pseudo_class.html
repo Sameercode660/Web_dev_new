@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css has pseudo selector</title>
+    <style>
+        .container{
+            width: 80%;
+            border: 1px solid red;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+        .container:has(p){
+            background-color: rgba(0, 0, 0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magni assumenda, ipsam fugiat asperiores, expedita dolorum quae optio vero similique ratione! Perspiciatis laudantium sit repellat inventore voluptatibus eaque modi eius?</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vitae quos ab atque, iure ducimus saepe rem optio quis reprehenderit asperiores commodi corrupti at aperiam doloremque cupiditate quia minima nobis?</span>
+    </div>
+</body>
+</html>

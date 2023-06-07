@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body, html{
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        body{
+            background-color: gray; 
+        }
+
+        .container{
+            border: 2px solid red;
+            width: 80%;
+            height: 90%;
+            margin: auto;
+            border: 2px solid black;
+        }
+
+        .head{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            background-color: red;
+            color: white;
+        }
+        .head h1{
+            margin-left: 20px;
+        }
+        .navigation{
+            width: 100%;
+            background-color: rgb(150, 66, 246);
+            padding: 10px;
+        }
+        .navigation a{
+            color: white;
+            text-decoration : none;
+            padding: 0px 5px;
+            font-size: 20px;
+        }
+        .section{
+            width: 100%;
+            display: flex;
+            justify-content: start;
+        }
+        .section1{
+            width: 80%;
+            border-right: 2px solid gray;
+            height: 680px;
+            background-color: white;
+            padding: 10px;
+            text-align: justify;
+        }
+        .section1 ul li{
+            list-style-type: none;
+        }
+        .section2{
+             padding: 10px 40px;
+             background-color: rgba(218, 191, 244, 0.916);
+             width: 30%;
+        }
+        .foot{
+            background-color: red;
+            height: 45px;
+            text-align: right;
+        }
+        .foot span{
+            color: white;
+            position: relative;
+            top: 10px;
+            right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="head">
+            <h1>SamCreation</h1>
+        </header>
+        <nav class="navigation">
+            <a href="">Home</a>
+            <a href="">AboutUs</a>
+            <a href="">Section</a>
+            <a href="">Contact</a>
+        </nav>
+        <main class="section">
+            <div class="section1">
+                <h1>It is first section</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae accusamus eius illo sint nobis possimus explicabo veniam voluptatum velit, vitae unde incidunt, harum veritatis, modi quibusdam maiores maxime obcaecati ab.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas est fugit ducimus alias unde dolores voluptatum corporis eveniet, iusto quidem doloribus earum voluptatibus suscipit, consequuntur aut eligendi doloremque. Debitis, ratione!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi enim sequi optio repudiandae ab nesciunt laborum maxime saepe. Ullam modi magnam dolores blanditiis sunt illo, similique aut iste veniam nemo.
+                <ul>
+                    <li>lorem auto text generator</li>
+                    <li>lorem auto text generator</li>
+                    <li>lorem auto text generator</li>
+                    <li>lorem auto text generator</li>
+                </ul>
+            </div>
+            <div class="section2">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Section</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </main>
+        <footer class="foot">
+            <span>Samcreation@copyright 2023</span>
+        </footer>
+    </main>
+</body>
+</html>

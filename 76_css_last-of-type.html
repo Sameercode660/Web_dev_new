@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css last of child</title>
+    <style>
+        .container p:last-of-type{
+            color : red;
+        }
+        .container p:nth-last-of-type(2){
+            color : blue;
+        }
+        body p:nth-last-of-type(2){
+            color : green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>lorem</p>
+        <p>lorem s</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste, cumque sit quam odio nostrum rerum autem eveniet eum, sed voluptatum consequuntur consequatur est eius unde dolore nulla. Consectetur, harum.</p>
+    <div class="other-container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nulla quo ipsa voluptatum praesentium nobis tempore hic, architecto nihil itaque minus repellat facilis. Iusto ratione quos laborum culpa voluptatem similique!
+    </div>
+</body>
+</html>

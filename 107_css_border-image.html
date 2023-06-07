@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css border-image</title>
+    <style>
+        :root{
+            --main-color : blue;
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+        }
+        .container p{
+            text-align: justify;
+            border: 30px solid;
+            border-image-source : url(./img2.jpg);
+            border-image-slice: 100% 100%;
+            border-image-repeat: space;
+            background-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam totam praesentium nemo quis. Voluptas animi cumque perferendis, quaerat harum deserunt atque. Quae est ea illum reiciendis nulla fugiat, officia rem architecto ipsam voluptate. Quos vero nihil facere! Voluptatem harum cumque magnam eligendi ipsam molestiae deleniti enim eos iusto fugiat.</p>
+    </div>
+</body>
+</html>

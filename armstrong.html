@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" name="" id="">
+        <button class="btn">Submit</button>
+    </div>
+    <script>
+        let button = document.querySelector('.btn')
+        let input = document.querySelector('input')
+        let body = document.querySelector('body')
+
+        button.addEventListener('click', () => {
+            let number = input.value;
+
+            let temp = number;
+            let sum = 0;
+
+            while (temp != 0) {
+                rem = parseInt(temp % 10);
+                cube = parseInt(rem * rem * rem)
+                sum = sum + cube;
+                temp = parseInt(temp / 10)
+            }
+            if (sum == number) {
+                 input.style.border = '1px solid green'
+                 body.style.backgroundColor = 'green'
+                }
+                else {
+                    input.style.border = '1px solid red'
+                    body.style.backgroundColor = 'red'
+            }
+            console.log(typeof input.value)
+        })
+    </script>
+</body>
+
+</html>

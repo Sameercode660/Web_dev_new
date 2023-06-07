@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container{
+            border: 2px solid red;
+            width: 75%;
+            height: 800px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .part-one-container{
+            border: 2px solid red;
+            height: 75%;
+            display: flex;
+            
+        }
+        .footer-container{
+            border: 2px solid red;
+            height: 24%;
+        }
+
+        .image-container-pad{
+            width: 75%;
+            height: 100%;
+            border: 2px solid green;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+        .handler-container{
+            width: 25%;
+            height: 100%;
+            border: 2px solid blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="part-one-container">
+            <div class="image-container-pad">
+
+            </div>
+            <div class="handler-container">
+                 <input type="file">
+            </div>
+        </div>
+        <div class="footer-container">
+
+        </div>
+
+    </div>
+    <script>
+        let image = document.querySelector('input');
+        let container = document.querySelector('.image-container-pad');
+
+        image.addEventListener('change' , (event)=>{
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener('load', ()=>{
+                container.style.backgroundImage = `url(${reader.result})`;
+
+            })
+            reader.readAsDataURL(file)
+        })
+    </script>
+</body>
+</html>

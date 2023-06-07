@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        p{
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <p class="clock"></p>
+    </div>
+
+    <script>
+     function clock()
+     {
+        let clock = document.querySelector('.clock')
+        let date = new Date()
+        let hour = date.getHours()
+        let minutes = date.getMinutes()
+        let second = date.getSeconds()
+
+        hour = hour < 10 ? '0' + hour : hour;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        second = second < 10 ? '0' + second : second;
+
+        let fullDate = `${hour} : ${minutes} : ${second}`
+        clock.textContent = fullDate
+     }
+
+     setInterval(clock, 1000);
+    </script>
+</body>
+</html>

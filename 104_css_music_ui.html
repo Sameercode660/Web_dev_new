@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Music ui</title>
+
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(149, 46, 245, 0.954);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* gap: 150px; */
+            
+            
+        }
+
+        .container-upper-action{
+            position: absolute;
+            top: 20px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .drop-down i{
+            background-color: transparent;
+            color: white;
+            
+        }
+        .song{
+            padding: 5px 5px;
+            width: 200px;
+            text-align: center;
+            border-radius: 25px;
+            background-color: rgba(255,255,255,0.1)
+        }
+        .song span{
+            display: inline-block;
+            color: white;
+        }
+        .first{
+            position: relative;
+            left: -20px;
+            
+        }
+        .second{
+            position: relative;
+            right: -20px;
+        }
+
+        .fa-ellipsis-vertical{
+            margin-top: 5px;
+            color: white;
+            font-size: 20px;
+        }
+        .music-icon-container{
+            width: 85%;
+            height: 350px;
+            position: relative;
+            bottom: 100px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            animation-name: rotation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .fa-music{
+            font-size: 200px;
+            margin-top: 70px;  
+            margin-left:-30px;
+        }
+
+
+        .song-name{
+            width: 85%;
+            position: relative;
+            bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .song-name p{
+            color: white;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .song-name i{
+            color: white;
+            font-size: 30px;
+        }
+        .progress-line{
+            width: 75%;
+            height: 5px;
+            background-color: gray;
+        }
+        
+        .special{
+            transform: rotate(180deg);
+        }
+        .play-pause-container
+        {
+            position: relative;
+            top: 50px;
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .play-pause-container i{
+            font-size: 25px;
+            color: white;
+            justify-content: space-evenly;             
+        }
+
+        .filling{
+            position: relative;
+            top: -9px;
+            display: inline-block;
+            width: 10%;
+            height: 5px;
+            background-color: red;
+        }
+      
+        @keyframes rotation{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- first section  -->
+        <div class="container-upper-action">
+            <div class="drop-down">
+                <i class="fa-solid fa-caret-down fa-xl"></i>
+            </div>
+            <div class="song">
+                <span class="first">Songs</span>
+                <span class="second">Lyrics</span>
+            </div>
+            <div class="side-three-dot">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <!-- second container  -->
+        <div class="music-icon-container">
+            <i class="fa-solid fa-music"></i>
+        </div>
+
+        <!-- third container -->
+        <div class="song-name">
+            <p class="song-name-para">This is the song name..</p>
+            <i class="fa-regular fa-heart"></i>
+        </div>
+
+        <!-- forth container  -->
+        <div class="progress-line">
+             <audio src="./sp2.mp3" class="audio"></audio>
+             <span class="filling"></span>
+        </div>
+
+        <!-- fifth container -->
+
+        <div class="play-pause-container">
+            <i class="fa-solid fa-repeat"></i>
+            <i class="fa-solid fa-right-to-bracket special"></i>
+            <i class="fa-solid fa-pause"></i>
+            <i class="fa-solid fa-right-to-bracket special1"></i>
+            <i class="fa-solid fa-list"></i>    
+        </div>
+        
+    </div>
+    <script>
+        let pause = document.querySelector('.fa-pause')
+        let container = document.querySelector('.music-icon-container')
+        let audio = document.querySelector('.audio')
+        let songName = document.querySelector('.song-name-para')
+        let next = document.querySelector('.special1')
+        let prev = document.querySelector('.special')
+        let clicked = 0;
+
+        audio.addEventListener('timeupdate', ()=>{
+            const progress = audio.currentTime / audio.duration;
+            document.querySelector('.filling').style.width = `${progress * 100}%`
+        })
+        pause.addEventListener('click', ()=>{
+            if(clicked == 0)
+            {
+            container.style.animationPlayState = 'paused'   
+            audio.pause()
+            clicked = 1;
+
+        }
+        else
+        {
+            container.style.animationPlayState = 'running'    
+            audio.play()
+            clicked = 0;    
+           
+            }
+        })
+
+        
+
+        
+        
+    </script>
+</body>
+</html>

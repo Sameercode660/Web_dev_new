@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orbit Simulation</title>
+	<style>
+		body {
+			background-color: #222;
+		}
+
+		#sun {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background-color: #ffce31;
+			box-shadow: 0px 0px 80px #ffce31;
+			transform: translate(-50%, -50%);
+		}
+
+		#earth {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #2979ff;
+			transform-origin: 0% 50%;
+		}
+
+		#moon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #c7c7c7;
+			transform-origin: 0% 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="sun"></div>
+	<div id="earth"></div>
+	<div id="moon"></div>
+
+	<script>
+		var earth = document.getElementById("earth");
+		var moon = document.getElementById("moon");
+
+		// Define the animation for the Earth orbiting around the Sun
+		var earthAngle = 0;
+		var earthRadius = 200;
+		var earthSpeed = 0.5;
+
+		function earthOrbit() {
+			var x = earthRadius * Math.cos(earthAngle * Math.PI / 180);
+			var y = earthRadius * Math.sin(earthAngle * Math.PI / 180);
+			earth.style.transform = `translate(${x}px, ${y}px) rotate(${earthAngle}deg)`;
+			earthAngle += earthSpeed;
+			requestAnimationFrame(earthOrbit);
+		}
+
+		// Define the animation for the Moon orbiting around the Earth
+		var moonAngle = 0;
+		var moonRadius = 50;
+		var moonSpeed = 2;
+
+		function moonOrbit() {
+			var x = moonRadius * Math.cos(moonAngle * Math.PI / 180);
+			var y = moonRadius * Math.sin(moonAngle * Math.PI / 180);
+			moon.style.transform = `translate(${x}px, ${y}px) rotate(${moonAngle}deg)`;
+			moonAngle += moonSpeed;
+			requestAnimationFrame(moonOrbit);
+		}
+
+		// Start the animations
+		earthOrbit();
+		moonOrbit();
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container p:last-child::first-letter{
+            color: red;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+        } */
+
+        p::first-letter{
+            color : red;
+        }
+
+        p::first-line{
+            color : blue;
+        }
+        p::selection{
+            color: red;
+            background: #000;
+        }
+        input::placeholder{
+            color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi inventore fuga, labore ut ex commodi eaque pariatur quo dolor impedit est numquam unde nihil blanditiis sit veritatis eius temporibus aliquid?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sit rerum quidem ipsam officia. Repudiandae, molestiae nesciunt quaerat voluptatibus nihil quis obcaecati tempore. Eligendi magnam placeat voluptate sit optio porro.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, fuga. Voluptates incidunt vel sit sequi eligendi veniam dignissimos nulla ab, nesciunt, minus optio. Veritatis voluptatibus eos ad aliquid ipsum provident.</p>
+
+        <input type="text" placeholder="It is the text that is to be entered">
+        <input type="number" placeholder="It is the another number section">
+        <label for="gender">Male</label>
+        <input type="radio" name="gender">
+        <label for="gender">Female</label>
+        <input type="radio" name="gender" id="gender">
+    </div>
+</body>
+</html>

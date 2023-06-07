@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css user-select</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .container{
+            text-align: justify;
+            background-color: rgba(0,0,0,.3);
+            color : #fff;
+            padding: 10px 20px;
+            width: 80%;
+            border: 2px solid gray;
+            margin : auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, officiis doloribus praesentium natus cum quod repudiandae iste asperiores, iure dolorum vitae, nisi odit adipisci harum. Repudiandae recusandae nam dolor possimus esse officiis ratione repellendus rerum asperiores, quibusdam deleniti distinctio? Quibusdam in voluptate debitis quia repellat, error similique aperiam maxime nemo maiores asperiores deleniti inventore libero unde sequi doloremque assumenda dolorem perferendis eaque molestias temporibus animi porro? Recusandae, autem aut corporis necessitatibus iste quod commodi sit repellat! Libero perferendis tempora omnis magni provident fugit quo, consectetur accusantium suscipit autem molestiae eligendi blanditiis temporibus saepe minima dolorum perspiciatis quos quidem id quas aliquam fugiat assumenda ex earum! Animi molestias quasi distinctio alias illum error expedita, tempora voluptatum delectus praesentium quam, impedit atque quod velit optio, porro deleniti soluta? Ullam natus dolor quibusdam nostrum mollitia dolorum incidunt facilis! Sequi quae amet enim consectetur voluptatem fuga quidem perferendis, earum quod reiciendis nisi. Quo alias perspiciatis quaerat tempora? Facere expedita quod, sapiente distinctio culpa error consequatur! Necessitatibus suscipit veniam quidem architecto mollitia ipsum voluptatem cumque doloremque est maiores dicta enim repellendus, nemo fugit consequatur iusto atque accusantium provident quae et quam? Quas, eveniet commodi earum cumque aliquid quisquam ullam minima aut fugiat! Autem, odio rem.
+    </div>
+    <script>
+        const container = document.querySelector('.container')
+
+        container.style.userSelect = 'none';
+    </script>
+</body>
+</html>

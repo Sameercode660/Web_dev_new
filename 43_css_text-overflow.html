@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text overflow</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid red;
+            width: 50%;
+            height: 600px;
+            margin: auto;
+            padding: 20px 40px;
+            text-align: justify;
+            overflow: auto;
+            
+        }
+        .container::-webkit-scrollbar-track{
+            background-color: #fff;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+  background-color: #F5F5F5; /* replace with your background color */
+  border-radius: 10px; /* add rounded corners for a more polished look */
+}
+        p{
+            border: 2px solid red;
+            width: 60%;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+        summary{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration : underline green wavy;
+            text-transform : uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet impedit aspernatur ad, voluptatem modi mollitia cumque exercitationem voluptate magni tempore accusamus inventore cum. A ducimus dignissimos suscipit consectetur, quo libero? Vitae, iure accusantium, odio saepe voluptatum incidunt sequi est fugit dignissimos itaque eum magnam quae dicta possimus corrupti suscipit libero commodi! Alias recusandae libero optio iste molestiae vero, aperiam esse, molestias eum dolor excepturi fugiat possimus reiciendis impedit? Deserunt consequuntur quibusdam in doloribus tenetur sed enim reprehenderit delectus sapiente a quia laboriosam odio soluta quisquam sint, obcaecati eligendi porro autem pariatur id quos fuga. Illum iure perferendis nobis ratione id repellendus excepturi cum aspernatur hic ad rerum quisquam tenetur, possimus voluptate debitis commodi quibusdam culpa! Corrupti necessitatibus culpa iusto rem quae, maiores quaerat similique veritatis? Harum dolorum architecto error, fugit mollitia blanditiis quae eaque quam! Quas non obcaecati ab inventore modi accusamus, excepturi aliquam enim eaque tempore doloremque sint rem magni error iste consequuntur quod quaerat quae illum, facere a. Ullam esse alias labore autem quidem modi possimus eligendi illo doloribus explicabo! Quibusdam dignissimos quam atque tenetur! Ipsa, tempore autem. Aut sunt eos necessitatibus consequuntur. Odit voluptatum ducimus inventore nobis eveniet perspiciatis sed quos, quae, distinctio nisi debitis nesciunt?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, at. Adipisci voluptatem itaque magni quo porro atque esse id totam debitis eos? Facere modi iusto ipsum velit officiis veritatis consequatur vel blanditiis aut ipsa alias saepe aspernatur illum, numquam doloribus inventore laudantium provident quae repellendus corporis? Fugiat cumque tenetur aliquam optio suscipit voluptate voluptates sequi ratione corporis explicabo, debitis laudantium consequuntur voluptatum autem non iste consequatur. Est pariatur cumque enim voluptates iure voluptas ducimus? Nostrum perspiciatis eos assumenda aperiam officia earum voluptates beatae autem inventore, adipisci ratione. Sed cum id recusandae est sint magnam beatae doloribus! Minus vitae veritatis soluta nihil autem sapiente adipisci eligendi quod tempore ullam, expedita impedit laboriosam, ut vero fugiat voluptatum similique quaerat nulla, saepe consectetur eum voluptas minima fuga! Accusantium architecto animi tenetur numquam corporis ut pariatur, nisi deleniti est assumenda incidunt, deserunt quos velit nobis et! Necessitatibus reprehenderit iure esse veritatis vel, ad adipisci blanditiis tenetur. Dolores laudantium saepe fugiat numquam quod, reiciendis non minus, veritatis quas consequatur, necessitatibus reprehenderit! Nesciunt, esse ullam dolore incidunt quas facere et molestiae maiores libero, sint eligendi accusantium. Nihil doloremque molestiae quasi ducimus, illo temporibus vitae, ea ipsam ex, minus beatae harum aperiam? Recusandae illo earum cumque non?
+    </div>
+    <details>
+        <summary>drop</summary>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt magnam tenetur. Ratione quasi suscipit, non sit, omnis fuga molestias laborum nisi fugiat accusantium ducimus nulla optio eius fugit illo!</p>
+    </details>
+</body>
+</html>

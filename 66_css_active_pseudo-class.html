@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>active pseudo class</title>
+    
+    <style>
+        #link-1:active{
+            background-color: yellow;
+        }
+        input:checked{
+            width: 20px;
+            color: red;
+            background-color: green;
+            width: 30px;
+            border: 2px solid red;
+        }
+        #text:disabled{
+            background-color: rgba(0, 0, 0, 0.2);
+            cursor: copy;
+        }
+        div:empty{
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border: 2px solid red;
+            overflow: auto;
+            resize: both;
+        }
+        input:enabled{
+            background-color: yellow;
+        }
+        a:first-child{
+            color: red;
+        }
+        p:first-of-type{
+            color : green;
+            background-color: yellow;
+            display: inline;
+        }
+
+        #text-1:focus{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="link active" id="link-1">Home</a>
+        <a href="" class="link">about</a>
+        <a href="" class="link">Contact</a>
+        <input type="radio" checked>
+        <input type="text" name="text" id="text" disabled value="password">
+        <input type="text" name="text" id="text-1"  value="password">
+        <div></div>
+    </div>
+    <div class="container-1">
+        <p>lorem</p>
+        <p>lorem</p>
+        <p>lorem</p>
+    </div>
+    <div class="container-2">
+        <p>lorem-1</p>
+        <p>lorem-2</p>
+        <p>lorem-3</p>
+        <p>lorem-4</p>
+        <p>lorem-5</p>
+    </div>
+    <div class="container-3">
+        <p>it's lorem-1</p>
+        <p>it's lorem-2</p>
+        <p>it's lorem-3</p>
+        <p>it's lorem-4</p>
+        <p>it's lorem-5</p>
+    </div>
+</body>
+</html>

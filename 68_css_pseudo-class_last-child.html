@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last-child</title>
+    <style>
+        .container p:last-child{
+            background: green;
+        }
+        .container p:last-of-type{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>lorem1</p>
+        <p>lorem2</p>
+        <p>lorem3</p>
+        <p>lorem4</p>
+        <p>lorem5</p>
+    </div>
+    <div class="container">
+        <p>lorem-1</p>
+        <p>lorem-2</p>
+        <p>lorem-3</p>
+        <p>lorem-4</p>
+        <p>lorem-5</p>
+        <p>lorem-6</p>
+    </div>
+</body>
+</html>

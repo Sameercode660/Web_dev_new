@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css and js for change the color on based on time</title>
+    <style>
+        .container{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         
+    </div>
+    <script>
+        
+        let span = document.querySelector('.container')
+        console.log(span)
+        setTimeout(changeInColor, 5000) 
+        // setTimeout(() => {
+            
+            // }, timeout);
+        setTimeout(()=>{
+            span.style.backgroundColor = 'blue';
+        }, 5000)
+        async function changeInColor(){
+            span.style.backgroundColor = 'red'
+    
+        }            
+            </script>
+</body>
+</html>

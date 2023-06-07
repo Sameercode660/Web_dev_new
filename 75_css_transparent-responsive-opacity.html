@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transparent</title>
+    
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 200px;
+            background-color: rgba(111, 35, 242, 0.909);
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 400px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+            box-shadow: 0px 0px 25px 0px rgb(132, 246, 238);
+        }
+        .show{
+            opacity: 1;
+
+        }
+        label{
+            color: white;
+        }
+        input{
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid cyan;
+            padding-bottom: 5px;
+            color: white;
+        }
+        input:valid{
+            color: green;
+        }
+        input:invalid{
+            color:red;
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">Show</button>
+    </div>
+    <div class="main-container">
+        <form class="ssd" action="temp.php">
+            <label for="username">Username:</label>
+            <input type="email" name="username" id="username" value="Username">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="Password">
+        </form>
+    </div>
+    <script>
+        let button = document.querySelector('.btn')
+        let form = document.querySelector('.ssd')
+
+
+        button.addEventListener('click', ()=>{
+              form.classList.toggle('show')
+        })
+    </script>
+</body>
+</html>

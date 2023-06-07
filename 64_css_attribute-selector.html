@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        .container{
+            width: 70%;
+            margin: 10px auto;
+            border: 1px solid red;
+            padding: 10px 20px;
+        }
+        .container[title]{
+            color: red;
+        }
+        .container[title="This is container"]
+        {
+            color: blue;
+        }
+        .container[title^="This"]{
+            color : yellow;
+        }
+        .container[title$='container']{
+            color: red;
+        }
+        .container[title*='is']
+        {
+            color: blue;
+        }
+        .container[title~= 'is']
+        {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" title="This is container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quae adipisci quos, animi ipsa repellendus assumenda consectetur commodi, officiis quam est in quasi similique sequi odio eius repudiandae aliquam id.
+    </div>
+    <div class="container" title="This is an another container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa unde nesciunt, dicta itaque minus nisi, atque libero sunt labore iste sapiente esse explicabo qui ut accusamus. Facilis dicta cupiditate odio?
+    </div>
+    <div class="container" >
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, at pariatur harum ipsum laudantium, in repellat quo eos aspernatur nam dolor atque iure obcaecati maxime veniam, autem vitae porro voluptatem.
+    </div>
+</body>
+</html>

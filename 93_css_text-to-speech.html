@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width : 100%
+        }
+        body{
+            display : flex;
+            justify-content : center;
+            align-items : center;
+        }
+        .container-button{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-area-container">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="container-button">
+            <button class="btn">Speak</button>
+        </div>
+    </div>
+
+    <script>
+        let input = document.querySelector('textarea')
+        let button = document.querySelector('.btn')
+
+        button.addEventListener('click', ()=>{
+            let utterance = new SpeechSynthesisUtterance(input.value)
+            speechSynthesis.speak(utterance)
+        })
+    </script>
+</body> 
+</html>
